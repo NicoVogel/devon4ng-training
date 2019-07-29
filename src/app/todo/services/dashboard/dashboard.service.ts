@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, empty } from 'rxjs';
+import { Observable, EMPTY } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 
 import { UserService } from '../user/user.service';
@@ -21,7 +21,7 @@ export class DashboardService {
     // TODO call todoService to receive todos,
     // TODO and call userService after for every user id
     // TODO build TodoWithUser objects
-    return empty();
+    return EMPTY;
   }
 
 }

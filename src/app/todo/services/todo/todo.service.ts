@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, empty } from 'rxjs';
+import { Observable, EMPTY } from 'rxjs';
 
 import { Todo } from './todo';
 
@@ -15,7 +15,7 @@ export class TodoService {
 
   getTodos(): Observable<Todo[]> {
     // TODO get todos from /api/todos
-    return empty();
+    return EMPTY;
   }
 
 }

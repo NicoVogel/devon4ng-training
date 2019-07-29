@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, empty } from 'rxjs';
+import { Observable, EMPTY } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 import { User } from './user';
@@ -15,7 +15,7 @@ export class UserService {
 
   getUser(id: number): Observable<User> {
     // TODO get user from /api/users/:id
-    return empty();
+    return EMPTY;
   }
 
 }

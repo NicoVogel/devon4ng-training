@@ -6,6 +6,7 @@ import { DashboardService } from './dashboard.service';
 import { Todo } from '../todo/todo';
 import { User } from '../user/user';
 import { TodoWithUser } from './todo-with-user';
+import { Type } from '@angular/core';
 
 describe('DashboardService', () => {
 
@@ -28,7 +29,7 @@ describe('DashboardService', () => {
       imports: [TodoModule, HttpClientTestingModule],
     });
     sut = TestBed.get(DashboardService);
-    httpController = TestBed.get(HttpTestingController);
+    httpController = TestBed.get(HttpTestingController as Type<HttpTestingController>);
   });
 
   afterEach(() => {
