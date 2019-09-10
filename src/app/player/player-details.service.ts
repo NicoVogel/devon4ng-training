@@ -1,23 +1,22 @@
-import { Injectable } from '@angular/core';
-import { Player } from '../player';
-import { PlayerService } from '../player.service';
+import {Injectable} from '@angular/core';
+import {PlayerService} from './player.service';
+import {Player} from './player';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class PlayerDetailsService {
   private currentPlayer: Player;
   private originalPlayer: Player;
 
-  constructor(private playerService: PlayerService) { }
-
-  set player(plr: Player) {
-    this.originalPlayer = plr;
-    this.currentPlayer = Object.assign({}, this.originalPlayer);
+  constructor(private playerService: PlayerService) {
   }
 
   get player(): Player {
     return this.currentPlayer;
+  }
+
+  set player(plr: Player) {
+    this.originalPlayer = plr;
+    this.currentPlayer = Object.assign({}, this.originalPlayer);
   }
 
   restorePlayer() {

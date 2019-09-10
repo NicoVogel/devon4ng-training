@@ -1,0 +1,7 @@
+<fieldset>
+  <button (click)="add()">Add new Player</button>
+  <div *ngIf="player">
+    <app-player-detail [player]="player" (close)="closeDetails()" (save)="closeDetails()">
+    </app-player-detail>
+  </div>
+</fieldset>

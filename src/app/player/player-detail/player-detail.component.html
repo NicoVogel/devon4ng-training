@@ -16,6 +16,9 @@
     <label>College:</label><input [(ngModel)]="player.college">
   </fieldset>
   <fieldset>
+    <label>Team:</label><input [(ngModel)]="player.team">
+  </fieldset>
+  <fieldset>
     <label>Position:</label>
     <select [(ngModel)]="player.position" (ngModelChange)="player.position=$event;">
       <option *ngFor="let position of keys(positions)" [ngValue]="positions[position]">{{position}}</option>

@@ -1,13 +1,21 @@
-import { NgModule } from '@angular/core';
-import { PlayerListComponent } from './player-list/player-list.component';
-import { SharedModule } from '../shared/shared.module';
-import { PlayerDetailComponent } from './player-detail/player-detail.component';
+import {NgModule} from '@angular/core';
+import {PlayerListComponent} from './player-list/player-list.component';
+import {PlayerDetailComponent} from './player-detail/player-detail.component';
+import {PlayerNewComponent} from './player-new/player-new.component';
+import {PlayerRoutingModule} from "./player-routing.module";
+import {CommonModule} from "@angular/common";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {PlayerService} from "./player.service";
 
 @NgModule({
-  declarations: [PlayerListComponent, PlayerDetailComponent],
+  declarations: [PlayerListComponent, PlayerDetailComponent, PlayerNewComponent],
   imports: [
-    SharedModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PlayerRoutingModule
   ],
-  exports: [PlayerListComponent, PlayerDetailComponent]
+  exports: [PlayerListComponent, PlayerDetailComponent, PlayerNewComponent],
 })
-export class PlayerModule { }
+export class PlayerModule {
+}

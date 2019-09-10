@@ -1,11 +1,10 @@
-import { Team } from './team';
-import { Position } from './position';
+import {Position} from './position';
 
 export interface Player {
-    id?: number;
-    firstname: string;
-    lastname: string;
-    team: Team;
-    position: Position;
-    college: string;
+  id?: number;
+  firstname: string;
+  lastname: string;
+  team: string;
+  position: Position;
+  college: string;
 }
